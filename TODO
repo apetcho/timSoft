@@ -1,0 +1,9 @@
+TODO
+----
+
+* Write `setup.py`
+* Write README
+* Write `imanager` files with corresponding unit test
+* Design and implement the GUI component
+* Repeat the above two procedure for `tmanager`
+* Design a logo for the Tim Software
