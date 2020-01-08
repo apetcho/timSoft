@@ -29,21 +29,49 @@ class IncomeError(Exception):
 
 
 def parse_option():
+    parser = argparse.ArgumentParser()
     # Options
     # -b, --bare: show unformatted report
+    parser.add_argument("-v", "--bare", action="store_true",
+                        help="show unformatted report")
     # -c, --category <name> : categorize/tag your expenses
+    parser.add_argument("-c", "--category", metavar="<name>",
+                        help="categorize/tag your expenses")
     # -e, --earned: indicates income
+    parser.add_argument("-e", "--earned", help="indicates income")
     # -f, --file: specifies file name
+    parser.add_argument("-f", "--file", help="specifies file name")
     # -s [n] : show daily report with total after [n] days
+    # USE -d instead of -s as option
+    parser.add_argument('-d', '--daily', metavar="[n]", type=int,
+                        help="show daily report with total after [n] days")
     # -m [n] : show monthly report with total after [n] months
+    parser.add_argument('-m', "--monthly", metavar="[n]", type=int,
+                        help="show monthly report with total after [n] months")
     # -C : Show category/tag-wise report
+    # TODO: Usage of one-character optional argument
+    parser.add_argument("-C", action="store_true",
+                        help="Show category/tag-wise report")
     # -t, --total: Show just the total when used with -s
+    # TODO: How to to combine to option when used together
+    parser.add_argument('-t', '--total', action="store_true",
+                        help="show just the total when used with -d")
     # -M <mm> : Selected the start month (01 <= mm <= 12)
+    parser.add_argument('-sm', '--start-month', metavar="[N]", type=int,
+                        choices=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+                        help="select the start month ( 1 <= N <= 12 )")
     # -N <mm> : Select an end month (01 <= mm <= 12)
+    parser.add_argument('-em', '--end-month', metavar="[N]", type=int,
+                        choices=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+                        help="select the end month ( 1 <= N <= 12 )")
     # -Y <yy> : Select a year (00 <= yy <= 99)
+    years = list(range(100))
+    parser.add_argument('-y', '--year', metavar="[N]", type=int,
+                        choices=years,
+                        help="select a year ( 1 <= N <= 12 )")
     # -h, --help : Show this help
     # -v, --version: Show version
-    pass
+
 
 def show_info():
     pass
