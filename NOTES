@@ -1,0 +1,18 @@
+Basic command line options
+
+-b --bare               Show unformatted report
+-c --category <name>    categorise/tag your expenses
+-e --earned             indicates income
+-f --file <name>        specify file name
+
+-s [n]                  show daily report with total after [n] days
+-m [n]                  monthly report with total after [n] months
+-C                      show category/tag-wise report
+-t --total              shows just the total when used with -s
+
+-M <mm>                 select the start month (01 <= mm <= 12)
+-N <mm>                 select and end month (01 <= mm <= 12)
+-Y <yy>                 select a year (00 <= yy <= 99)
+
+-h --help               show this help
+-v --version            show version
