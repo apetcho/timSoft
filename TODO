@@ -8,3 +8,4 @@ TODO
 * Repeat the above two procedure for `tmanager`
 * Design a logo for the Tim Software
 * Create an email account for contact and bug report
+* Write a test for parsing command-line arguments
