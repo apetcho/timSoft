@@ -81,7 +81,9 @@ class IncomeManager:
     """Income Manager class."""
 
     def __init__(self):
-        pass
+        self.mode = None #---
+        # 
+        self.confdir = None # ----
 
     def main(self):
         pass
