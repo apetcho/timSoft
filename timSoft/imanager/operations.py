@@ -22,6 +22,11 @@ import logging
 class Operations:
 
     def __init__(self):
+        # 1- set the current year
+        # 2- check the existence of USERPROFILE environment variable: if
+        # no, raise an exception and quit.
+        # if yes, get it set its value to a local variable
+        # 3- mode: variable that tell whether to create 
         pass
 
     def _daily(self):
