@@ -64,9 +64,9 @@ class RecordInfo:
 
     def get_record_line(self):
         "Return the record line."
-        record = self.timestamp + self.tag + self.description
-        record += str(self.value) + str(self.earning)
-        record = str(self.recordId) + record
+        record = self.timestamp+","+ self.tag+","+self.description
+        record += "," + str(self.value) + "," + str(self.earning)
+        record = str(self.recordId) + "," + record
         return record
 
     def __str__(self):
