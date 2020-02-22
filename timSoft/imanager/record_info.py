@@ -70,7 +70,13 @@ class RecordInfo:
         return record
 
     def __str__(self):
-        pass
+        record = self.get_record_line()
+        return f"{record}"
 
     def __repr__(self):
-        pass
+        desc = self.description
+        val = self.value
+        tag = self.tag
+        earning = self.earning
+        return "RecordInfo({!r}, {!r}, tag={!r},earning={!r})"format(
+                desc, val, tag, earning)
