@@ -47,7 +47,7 @@ class RecordInfo:
         "Set an the earning record."
         self.earning = earning
         if self.earning is not None:
-            if is not isinstance(self.earning, (float, int)):
+            if not isinstance(self.earning, (float, int)):
                 raise TypeError("The earning value must be a number")
 
     def get_value(self):
