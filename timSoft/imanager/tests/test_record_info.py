@@ -10,7 +10,6 @@ from timSoft.imanager.record_info import RecordInfo
 description = "Bus ticket"
 value = 60.12
 recObj = RecordInfo(description, value)
-#recObj.get_record()
 now = recObj.timestamp
 
 
