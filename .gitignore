@@ -3,6 +3,5 @@ pem/
 build/
 dist/
 timSoft.egg-info/
-./*.pyc
-./*/*.pyc
-./*/__pycache__
+*.pyc
+__pycache__/
