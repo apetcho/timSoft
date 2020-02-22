@@ -8,51 +8,13 @@ from datetime import datetime
 from collections import namedtuple
 
 
-#class Record:
-#    """Record Type class"""
-#    __slot__=("timestamp","tag", "description","spent","earned","Id")
-#
-#    def __init__(self, timestamp, tag, description, spent, earned, Id):
-#        self.timestamp = timestamp
-#        self.tag = tag
-#        self.description = description
-#        self.spent = spent
-#        self.earned = earned
-#        self.Id = Id
-#
-#    @property
-#    def timestamp(self):
-#        return self.timestamp
-#
-#    @property
-#    def tag(self):
-#        return self.tag
-#
-#    @property
-#    def description(self):
-#        return self.description
-#
-#    @property
-#    def earned(self):
-#        return self.earned
-#
-#    @property
-#    def spent(self):
-#        return self.spent
-#
-#    @property
-#    def Id(self):
-#        return self.Id
-#
-
 class RecordInfo:
     """Record information object class"""
     MONTH = (None, "Jan", "Feb", "Mar", "Apr", "May", "Jun",
              "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
     COUNT = 0
     DEFAULT_TAG = "---"
-    #RECORD = namedtuple("RECORD", "timestamp tag description "
-    #                    "spent earned Id")
+
     def __init__(self, description, value, tag=None, earning=None):
         self.description = description
         self.value = value
@@ -104,13 +66,6 @@ class RecordInfo:
 
     def get_record(self):
         "Return the record"
-        #xx = recObj.
-        #record = self.timestamp+","+ self.tag+","+self.description
-        #record += "," + str(self.value) + "," + str(self.earning)
-        #record = str(self.recordId) + "," + record
-        #Record = namedtuple("Record",
-        #                    ["timestamp", "tag", "description",
-        #                     "spent", "earned", "Id"])
         record ={}
         record["ID"] = self.recordId
         record["tag"] = self.tag
