@@ -52,7 +52,7 @@ class RecordInfo:
         "Return the timestamp of this record."
         return self.timestamp
 
-    def get_record(self):
+    def get_record_line(self):
         "Return the record line."
         record = self.timestamp + self.tag + self.description
         record += str(self.value) + str(self.earning)
