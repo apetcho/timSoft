@@ -12,12 +12,13 @@ class RecordInfo:
     MONTH = (None, "Jan", "Feb", "Mar", "Apr", "May", "Jun",
              "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
     COUNT = 0
+    DEFAULT_TAG = "---"
 
     def __init__(self, description, value, tag=None, earning=None):
         self.description = description
         self.value = value
-        self.tag = tag
-        self.earning = earning
+        self.tag = tag or RecordInfo.DEFAULT_TAG
+        self.earning = earning or 0.0
         self.recordId = RecordInfo.COUNT + 1
         now = datetime.now()
         year = now.year
@@ -31,8 +32,6 @@ class RecordInfo:
     def set_tag(self, tag):
         """Set A tag for this record."""
         self.tag = tag
-        if self.tag is None:
-            self.tag = "---"
 
     def set_earning(self, earning):
         "Set an the earning record."
@@ -42,13 +41,23 @@ class RecordInfo:
                 raise TypeError("The earning value must be a number")
 
     def get_value(self):
-        pass
+        """Returns the expense's value"""
+        return self.value
 
     def get_description(self):
-        pass
+        """Return the description of this record."""
+        return self.description
 
     def get_timestamp(self):
-        pass
+        "Return the timestamp of this record."
+        return self.timestamp
+
+    def get_record(self):
+        "Return the record line."
+        record = self.timestamp + self.tag + self.description
+        record += str(self.value) + str(self.earning)
+        record = str(self.recordId) + record
+        return record
 
     def __str__(self):
         pass
