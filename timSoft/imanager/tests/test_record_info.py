@@ -7,12 +7,6 @@ Created on Sat Feb 22, 2020 11:26:22 AM
 import unittest
 from timSoft.imanager.record_info import RecordInfo
 
-#Record = record_info.Record
-#RecordInfo = record_info.RecordInfo
-#from timSoft.imanager.record_info import RecordInfo
-
-#RecordTuple = RecordInfo.RecordTuple
-# Input data for testing purpose
 description = "Bus ticket"
 value = 60.12
 recObj = RecordInfo(description, value)
@@ -68,9 +62,6 @@ class TestRecordInfo(unittest.TestCase):
 
     def test_get_record(self):
         """Test get_record_line method"""
-        #line = recObj.timestamp+','+recObj.tag+','+recObj.description
-        #line += ","+str(recObj.value) + "," + str(recObj.earning)
-        #line = str(recObj.recordId) + "," + line
         record = {}
         record["timestamp"] = recObj.timestamp
         record["tag"] = recObj.tag
