@@ -25,6 +25,7 @@ class RecordInfo:
         month = now.month
         day = now.day
         minute = now.minute
+        hour = now.hour
         second = now.second
         mn = RecordInfo.MONTH[month]
         self.timestamp = f"{mn}-{day}-{year}T{hour}:{minute}:{second}"
