@@ -62,7 +62,13 @@ class TestRecordInfo(unittest.TestCase):
         print("Testing get_timestamp() method finished.")
 
     def test_get_record_line(self):
-        pass
+        """Test get_record_line method"""
+        line = recObj.timestamp+','+recObj.tag+','+recObj.description
+        line += ","+str(recObj.value) + "," + str(recObj.earning)
+        line = str(recObj.recordId) + "," + line
+        print("\nTesting get_record_line() method")
+        self.assertEqual(recObj.get_record_line(), line)
+        print("Testing get_record_line() mehod finished.")
 
 
 if __name__ == "__main__":
