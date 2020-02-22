@@ -78,5 +78,5 @@ class RecordInfo:
         val = self.value
         tag = self.tag
         earning = self.earning
-        return "RecordInfo({!r}, {!r}, tag={!r},earning={!r})"format(
+        return "RecordInfo({!r}, {!r}, tag={!r},earning={!r})".format(
                 desc, val, tag, earning)
