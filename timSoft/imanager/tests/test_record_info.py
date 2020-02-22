@@ -36,7 +36,12 @@ class TestRecordInfo(unittest.TestCase):
         print("Testing set_tag() method finished.")
 
     def test_set_earning(self):
-        pass
+        """Test set_earning method"""
+        earning = 1800.0
+        recObj.set_earning(earning)
+        print("Testing set_earning() method")
+        self.assertEqual(recObj.earning, earning)
+        print("Testing set_earning() method finished.")
 
     def test_get_value(self):
         pass
