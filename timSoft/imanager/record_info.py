@@ -29,6 +29,16 @@ class RecordInfo:
         mn = RecordInfo.MONTH[month]
         self.timestamp = f"{mn}-{day}-{year}T{hour}:{minute}:{second}"
 
+    @staticmethod
+    def timestampinfo(recordObj):
+        "Return the timestamp detailed information"
+        dateinfo, timeinfo = recordObj.timestamp.split('T')
+        month, day, year = dateinfo.split("-")
+        hour, minute, second = timeinfo.split(":")
+        info = {"month": month, "day": day, "year": year,
+                "hour": hour, "minute": minute, "second": second}
+        return info
+
     def set_tag(self, tag):
         """Set A tag for this record."""
         self.tag = tag
