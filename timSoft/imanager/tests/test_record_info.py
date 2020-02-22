@@ -39,24 +39,27 @@ class TestRecordInfo(unittest.TestCase):
         """Test set_earning method"""
         earning = 1800.0
         recObj.set_earning(earning)
-        print("Testing set_earning() method")
+        print("\nTesting set_earning() method")
         self.assertEqual(recObj.earning, earning)
         print("Testing set_earning() method finished.")
 
     def test_get_value(self):
         """Test get_value method"""
-        print("Testing get_value() method")
+        print("\nTesting get_value() method")
         self.assertEqual(recObj.get_value(), value)
         print("Testing get_value() method finished.")
 
     def test_get_description(self):
         """Test get_description method"""
-        print("Testing get_description() method")
+        print("\nTesting get_description() method")
         self.assertEqual(recObj.get_description(), description)
         print("Testing get_description() method finished.")
 
     def test_get_timestamp(self):
-        pass
+        """Test get_timestamp() method"""
+        print("\nTesting get_timestamp() method")
+        self.assertEqual(recObj.get_timestamp(), recObj.timestamp)
+        print("Testing get_timestamp() method finished.")
 
     def test_get_record_line(self):
         pass
