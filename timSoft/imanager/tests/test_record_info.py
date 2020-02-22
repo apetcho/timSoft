@@ -45,12 +45,15 @@ class TestRecordInfo(unittest.TestCase):
 
     def test_get_value(self):
         """Test get_value method"""
-        print("Testing get_value method")
+        print("Testing get_value() method")
         self.assertEqual(recObj.get_value(), value)
-        print("Testing get_value method finished.")
+        print("Testing get_value() method finished.")
 
     def test_get_description(self):
-        pass
+        """Test get_description method"""
+        print("Testing get_description() method")
+        self.assertEqual(recObj.get_description(), description)
+        print("Testing get_description() method finished.")
 
     def test_get_timestamp(self):
         pass
