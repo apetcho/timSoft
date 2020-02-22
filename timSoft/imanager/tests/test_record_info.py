@@ -23,9 +23,9 @@ class TestRecordInfo(unittest.TestCase):
         hour, minute, second = timeinfo.split(':')
         info = {'month': month, "day": day, "year": year,
                 "hour": hour, "minute": minute, "second": second}
-        print("Testing timestampinfo() method")
+        print("\nTesting timestampinfo() method")
         self.assertEqual(RecordInfo.timestampinfo(recObj), info)
-        print("Test finished")
+        print("Testing timestampinfo finished")
 
     def test_set_tag(self):
         pass
