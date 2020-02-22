@@ -7,6 +7,11 @@ Created on Sat Feb 22, 2020 11:26:22 AM
 import unittest
 from timSoft.imanager.record_info import RecordInfo
 
+#Record = record_info.Record
+#RecordInfo = record_info.RecordInfo
+#from timSoft.imanager.record_info import RecordInfo
+
+#RecordTuple = RecordInfo.RecordTuple
 # Input data for testing purpose
 description = "Bus ticket"
 value = 60.12
@@ -61,13 +66,20 @@ class TestRecordInfo(unittest.TestCase):
         self.assertEqual(recObj.get_timestamp(), recObj.timestamp)
         print("Testing get_timestamp() method finished.")
 
-    def test_get_record_line(self):
+    def test_get_record(self):
         """Test get_record_line method"""
-        line = recObj.timestamp+','+recObj.tag+','+recObj.description
-        line += ","+str(recObj.value) + "," + str(recObj.earning)
-        line = str(recObj.recordId) + "," + line
+        #line = recObj.timestamp+','+recObj.tag+','+recObj.description
+        #line += ","+str(recObj.value) + "," + str(recObj.earning)
+        #line = str(recObj.recordId) + "," + line
+        record = {}
+        record["timestamp"] = recObj.timestamp
+        record["tag"] = recObj.tag
+        record["description"] = recObj.description
+        record["spent"] = recObj.value
+        record["earned"] = recObj.earning
+        record["ID"] = recObj.recordId
         print("\nTesting get_record_line() method")
-        self.assertEqual(recObj.get_record_line(), line)
+        self.assertEqual(recObj.get_record(), record)
         print("Testing get_record_line() mehod finished.")
 
 
