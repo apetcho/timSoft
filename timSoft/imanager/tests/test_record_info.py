@@ -25,10 +25,15 @@ class TestRecordInfo(unittest.TestCase):
                 "hour": hour, "minute": minute, "second": second}
         print("\nTesting timestampinfo() method")
         self.assertEqual(RecordInfo.timestampinfo(recObj), info)
-        print("Testing timestampinfo finished")
+        print("Testing timestampinfo() method finished.")
 
     def test_set_tag(self):
-        pass
+        """Test set_tag method"""
+        print("\nTesting set_tag() method")
+        tag = "transport"
+        recObj.set_tag(tag)
+        self.assertEqual(recObj.tag, tag)
+        print("Testing set_tag() method finished.")
 
     def test_set_earning(self):
         pass
