@@ -1,6 +1,65 @@
+==========================================
+DESIGN, DATA STRUCTURE AND API DESCRIPTION
+==========================================
+
+1- Income Manager
+=================
+Goal
+----
+Build a software capable of tracking user's income and expenses and
+report statistic by week, month, term or year.
+
+Data strurcture and API
+-----------------------
+* Income data
+    - date
+    - value
+***** Interface
+    - set_date()    --> date=[default=present_date]
+    - set_value()   --> value=earning
+
+* Expense data
+    - tag
+    - date and time
+    - value
+    - description
+***** Interface 
+    - set_tag()         --> tag
+    - set_datetime()    --> date and time [default= current time and date]
+    - set_value()       --> value
+
+* Report data
+    - List of income and expenses sorted by various criteria. By date
+      and time by default
+    - reporting criteria:
+        - the past #weeks, #months, #terms, #years, or year
+        - by tag
+        - by expense
+    - compute descriptive statistic (mean, stdev, total)
+
+User Interface
+--------------
+* operations
+    * add new expenses
+    * add new income
+    * view summary
+    * view summary by #week
+    * view summary by #month
+    * view summary by #term
+    * view summary by #year
+    * save report
+
+Utility
+-------
+ * data persistence: csv, json, pickle, sqlite3, sqlAlchemy, mongodb, ...
+ * command-line parser
+ * descriptive statistic tools
+ * graphic backend: postscript | matplotlib, seaborn, etc...
+ * GUI ??? -- tkinter, pyqt5, wx, ...
+    
+
 TODO
 ----
-
 * Write `setup.py`
 * Write README
 * Write `imanager` files with corresponding unit test
